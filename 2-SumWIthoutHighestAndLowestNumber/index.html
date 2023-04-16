@@ -8,9 +8,35 @@
   </head>
   <body>
     <script>
-    // **Task**
-    // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
-    // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+      // **Task**
+      // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+      // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+      // function sumArray(array) {
+      //   const highestNum = Math.max(array);
+      //   const lowestNum = Math.min(array);
+      //   let total = 0;
+      //   const result = array.forEach((item) => {
+      //     total = item++;
+      //   });
+      //   total = total - highestNum - lowestNum;
+      //   return total;
+      // }
+
+      function sumArray(arr) {
+        arr.sort((a,b) => a-b);
+        let sum = 0;
+        let minNum = arr[0]
+        let maxNum = arr[arr.length - 1];
+
+        for (let i = 1; i < arr.length -1; i++) {
+          sum += arr[i];
+        }
+        return sum;
+      }
+
+      const arr = [6, 2, 1, 8, 10];
+      console.log(sumArray(arr));
     </script>
   </body>
 </html>
