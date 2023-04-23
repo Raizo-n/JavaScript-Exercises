@@ -18,6 +18,7 @@
       // 0 <= score < 60	'F'
       // Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
 
+      // +++ My answer +++
       function getGrade(s1, s2, s3) {
         const totalNum = s1 + s2 + s3;
         const score = Math.floor(totalNum / 3);
@@ -40,6 +41,12 @@
         }
         return result;
       }
+
+      // +++ Other's answer +++
+        //   function getGrade(s1, s2, s3) {
+        //     let avg = (s1 + s2 + s3) / 3;
+        //     return avg >= 90 ? 'A' : avg >= 80 ? 'B' : avg >= 70 ? 'C' : avg >= 60 ? 'D' : 'F';
+        //   }
 
       console.log(getGrade(100, 85, 96), "A");
       console.log(getGrade(100, 70, 70), "B");
