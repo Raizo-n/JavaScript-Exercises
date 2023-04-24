@@ -13,20 +13,29 @@
       //  each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry..
       //  Assuming he's gonna grab a specific given number of bullets
       //  and move forward to fight another specific given number of dragons, will he survive?
+      //  >>Return true if yes, false otherwise :)
 
-      // Return true if yes, false otherwise :)
 
       // ===My answer===
-
       function hero(bullets, dragons){
-
+        const result = bullets / dragons
+        return result >= 2 ? true : false;
       }
+
+      // ===Other's answer===
+      // function hero(bullets, dragons){
+      //   return bullets >= dragons *2;
+      // }
+
+      // function hero(bullets, dragons){
+      //   return (bullets /2 >= dragons) ? true: false;
+      // }
 
       console.log(hero(10, 5), true);
       console.log(hero(7, 4), false);
       console.log(hero(1500, 751), false);
       console.log(hero(100, 40), true);
-      
+
     </script>
   </body>
 </html>
