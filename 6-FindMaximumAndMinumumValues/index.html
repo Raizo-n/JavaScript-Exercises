@@ -12,13 +12,8 @@
       // depending on the language ) that receive a list of integers as input,
       // and return the largest and lowest number in that list, respectively.
 
-      var min = function (list) {
-        return Math.min(...list)
-      };
-
-      var max = function (list) {
-        return Math.max(...list)
-      };
+      const min = (list) => Math.min(...list);
+      const max = (list) => Math.max(...list);
 
       // >>> another solution
       // function max(num) {
@@ -43,7 +38,6 @@
 
       console.log(min([-52, 56, 30, 29, -54, 0, -110]), -110);
       console.log(max([4, 6, 2, 1, 9, 63, -134, 566]), 566);
-
     </script>
   </body>
 </html>
