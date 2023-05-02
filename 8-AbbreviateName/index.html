@@ -16,8 +16,16 @@
       // patrick feeney => P.F
 
       function abbrevName(name) {
+        const nameArray = name.split(' ') // ['Sam', 'Harris']
+        const initials = nameArray.map(word => word[0].toUpperCase())
+        // console.log(nameArray);
+        // console.log(initials);
+        return initials.join('.')
       }
-      
+
+      console.log(abbrevName("Sam Harris"), "S.H");
+      console.log(abbrevName("John Lennon"), "J.L");
+      console.log(abbrevName("Evan Cole"), "E.C");
     </script>
   </body>
 </html>
