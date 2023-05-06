@@ -12,9 +12,18 @@
       // Your task is to write a function which returns the time since midnight in milliseconds.
       // Ex: h=0, m=1, s=1 >>> result = 61000
 
+      // My answer
       function past(h, m, s) {
-        
+        const hour = h * 60 * 60 * 1000;
+        const minute = m * 60 * 1000;
+        const second = s * 1000;
+        const result = hour + minute + second;
+        return result;
       }
+
+      console.log(past(0, 1, 1), 61000);
+      console.log(past(1, 1, 1), 3661000);
+      console.log(past(1, 0, 1), 3601000);
     </script>
   </body>
 </html>
